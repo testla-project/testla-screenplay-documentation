@@ -68,6 +68,18 @@ const config: Config = {
     ],
   ],
 
+    plugins: [
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'modules',
+          path: 'modules',
+          routeBasePath: 'modules',
+          sidebarPath: require.resolve('./sidebars.ts'),
+        },
+      ],
+    ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -87,11 +99,13 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {
-          href: '/modules',
-          label: 'Modules',
-          position: 'left',
-        },
+          {
+            type: 'docSidebar',
+            sidebarId: 'modulesSidebar',
+            docsPluginId: 'modules',
+            position: 'left',
+            label: 'Modules',
+          },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/testla/screenplay',
