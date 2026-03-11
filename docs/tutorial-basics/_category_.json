@@ -1,0 +1,8 @@
+{
+  "label": "Tutorial - Basic Test Setup",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to get started with Testla Screenplay. This and the following tutorials are based on our Testla Screenplay Playwright module which makes use of the test runner capabilities of Playwright."
+  }
+}
