@@ -5,11 +5,12 @@
 *Introduced in core: 0.5.0*
 
 ```typescript
-public get orSkipOnFail(): (Action | Task);
+public get orSkipOnFail(): Action;
 ```
 
 - **Description:** Allows to skip an action on fail.
-- **Returns:** `Action | Task` - Returns the current action or task.
+- **Returns:** `Action` - Returns the current action.
+
 
 Usage:
 
@@ -25,13 +26,13 @@ await actor.attemptsTo(
 *Introduced in core: 0.3.0*
 
 ```typescript
-public withAbilityAlias(alias: string): (Action | Task);
+public withAbilityAlias(alias: string): Action;
 ```
 
 - **Description:** Defines the ability alias to be used during execution.
 - **Parameters:**
   - `alias` - The alias.
-- **Returns:** `Action | Task` - Returns the current action or task.
+- **Returns:** `Action` - Returns the current action.
 
 Usage:
 
