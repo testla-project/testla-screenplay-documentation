@@ -4,22 +4,9 @@ The `Pause` class is an useful action for introducing delays in test scenarios, 
 
 This Action does not rely on a specific Ability.
 
-<!-- ## Table of Contents
+import ActionExtendCore from '../../../_action-extend-core.mdx';
 
-- [Pause](#pause)
-  - [Table of Contents](#table-of-contents)
-  - [Class Overview](#class-overview)
-    - [Extends](#extends)
-    - [Methods](#methods)
-      - [performAs](#performas)
-      - [for](#for)
-      - [orSkipOnFail](#orskiponfail) -->
-
-<!-- ## Class Overview -->
-
-## Extends
-
-This class extends the `Action` class, providing functionality for pausing test execution.
+<ActionExtendCore />
 
 ## Methods
 
@@ -55,22 +42,6 @@ await actor.attemptsTo(
 );
 ```
 
-### orSkipOnFail
+import ActionMethodsInheritedFromCore from '../../../_action-methods-inherited-from-core.mdx';
 
-*Introduced in: 1.0.0*
-
-```typescript
-public get orSkipOnFail(): Pause;
-```
-
-- **Description:** Allows to skip an action on fail.
-- **Returns:** `Pause` - Returns the current action.
-
-Usage:
-
-```typescript
-// Would skip the step on error without breaking the execution
-await actor.attemptsTo(
-    Pause.for(5000).orSkipOnFail,
-);
-```
+<ActionMethodsInheritedFromCore />

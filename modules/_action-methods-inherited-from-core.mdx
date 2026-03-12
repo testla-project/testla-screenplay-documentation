@@ -1,0 +1,42 @@
+## Methods inherited from Core
+
+### orSkipOnFail
+
+*Introduced in core: 0.5.0*
+
+```typescript
+public get orSkipOnFail(): (Action | Task);
+```
+
+- **Description:** Allows to skip an action on fail.
+- **Returns:** `Action | Task` - Returns the current action or task.
+
+Usage:
+
+```typescript
+// Would skip the step on error without breaking the execution
+await actor.attemptsTo(
+    Do.something().orSkipOnFail,
+);
+```
+
+### withAbilityAlias
+
+*Introduced in core: 0.3.0*
+
+```typescript
+public withAbilityAlias(alias: string): (Action | Task);
+```
+
+- **Description:** Defines the ability alias to be used during execution.
+- **Parameters:**
+  - `alias` - The alias.
+- **Returns:** `Action | Task` - Returns the current action or task.
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Do.something().withAbilityAlias('myAlias'),
+);
+```

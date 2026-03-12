@@ -2,9 +2,9 @@
 
 The `Input` class provides a way to verify if an input is empty. It allows for positive and negative checks. This class extends the `Question<boolean>` class. Input does not rely on any specific Ability.
 
-## Extends
+import QuestionExtendCore from '../../../_question-extend-core.mdx';
 
-This class extends the `Question<boolean>` class, providing specific functionality for verifying states of a given input.
+<QuestionExtendCore />
 
 ## Methods
 
@@ -81,23 +81,6 @@ await actor.asks(
 );
 ```
 
-### failAsFalse
+import QuestionMethodsInheritedFromCore from '../../../_question-methods-inherited-from-core.mdx';
 
-*Introduced in: 1.0.0*
-
-```typescript
-public get failAsFalse(): Entity;
-```
-
-- **Description:** Returns false instead of failing when exception occurrs.
-- **Returns:** `Input` - Returns the current question.
-
-Usage:
-
-```typescript
-// get evaluation result based on valid check
-const evaluationResult = await actor.asks(
-    Input.is.empty('some text').failAsFalse,
-);
-// do whatever necessary with the result
-```
+<QuestionMethodsInheritedFromCore />

@@ -1,76 +1,35 @@
 # Add
 
-The `Pause` class is an useful action for introducing delays in test scenarios, allowing for better synchronization with the system under test. This performs the action of pausing the test execution for the specified interval.
+The `Add` class is an action class in the Screenplay pattern designed for use with the `@testla/screenplay` library. This class allows actors to add cookies to the browser using the `BrowseTheWeb` ability provided by Testla.
 
-This Action does not rely on a specific Ability.
+import ActionExtendCore from '../../../../_action-extend-core.mdx';
 
-## Table of Contents
+<ActionExtendCore />
 
-- [Pause](#pause)
-  - [Table of Contents](#table-of-contents)
-  - [Class Overview](#class-overview)
-    - [Extends](#extends)
-    - [Methods](#methods)
-      - [performAs](#performas)
-      - [for](#for)
-      - [orSkipOnFail](#orskiponfail)
+## Methods
 
-## Class Overview
-
-### Extends
-
-This class extends the `Action` class, providing functionality for pausing test execution.
-
-### Methods
-
-#### performAs
+### performAs
 
 ```typescript
-public async performAs(): Promise<void>;
+public performAs(actor: Actor): Promise<any>;
 ```
 
-- **Description:** Pause the execution of further test steps for the specified interval in milliseconds.
-- **Parameters:** None
-- **Returns:** `Promise<void>` - A promise that resolves when the pause is complete.
-
-#### for
-
-*Introduced in: 1.0.0*
-
-```typescript
-public static for(ms: number): Pause;
-```
-
-- **Description:** Create a new instance of the `Pause` class with a specified duration.
+- **Description:** Adds the cookies to the browser using the `BrowseTheWeb` ability.
 - **Parameters:**
-  - `ms` - The interval in milliseconds for which the test execution will be paused.
-- **Returns:** `Pause` - A new instance of the `Pause` class.
+  - `actor` - The actor performing this action.
+- **Returns:** `Promise<any>` - Returns a promise that resolves after adding the cookies into the browser context.
 
-Usage:
-
-```typescript
-// Pause further execution for 5 seconds
-await actor.attemptsTo(
-    Pause.for(5000),
-);
-```
-
-#### orSkipOnFail
-
-*Introduced in: 1.0.0*
+### cookies
 
 ```typescript
-public get orSkipOnFail(): Pause;
+public static cookies(cookies: Cookie[]): Add;
 ```
 
-- **Description:** Allows to skip an action on fail.
-- **Returns:** `Pause` - Returns the current action.
+- **Description:** Creates a new instance of the `Add` class with the specified cookies.
+- **Parameters:**
+  - `cookies` - The cookies to add.
+- **Returns:** `Add` - Returns a new `Add` instance.
 
-Usage:
+import ActionMethodsInheritedFromCore from '../../../../_action-methods-inherited-from-core.mdx';
 
-```typescript
-// Would skip the step on error without breaking the execution
-await actor.attemptsTo(
-    Pause.for(5000).orSkipOnFail,
-);
-```
+<ActionMethodsInheritedFromCore />

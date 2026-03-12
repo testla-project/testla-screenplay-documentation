@@ -2,9 +2,9 @@
 
 The `DateToCheck` class provides a way to verify if a date is valid or how it compares to a compare date (before, equal, after). It allows for positive and negative checks. This class extends the `Question<boolean>` class. DateToCheck does not rely on any specific Ability.
 
-## Extends
+import QuestionExtendCore from '../../../_question-extend-core.mdx';
 
-This class extends the `Question<boolean>` class, providing specific functionality for verifying states of a given date.
+<QuestionExtendCore />
 
 ## Methods
 
@@ -195,23 +195,6 @@ await actor.asks(
 );
 ```
 
-### failAsFalse
+import QuestionMethodsInheritedFromCore from '../../../_question-methods-inherited-from-core.mdx';
 
-*Introduced in: 1.0.0*
-
-```typescript
-public get failAsFalse(): DateToCheck;
-```
-
-- **Description:** Returns false instead of failing when exception occurrs.
-- **Returns:** `DateToCheck` - Returns the current question.
-
-Usage:
-
-```typescript
-// get evaluation result based on valid check
-const evaluationResult = await actor.asks(
-    DateToCheck.whichIs(myDate).is.valid.failAsFalse,
-);
-// do whatever necessary with the result
-```
+<QuestionMethodsInheritedFromCore />

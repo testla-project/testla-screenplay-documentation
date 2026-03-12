@@ -1,0 +1,43 @@
+## Methods inherited from Core
+
+### failAsFalse
+
+*Introduced in core: 0.5.0*
+
+```typescript
+public get failAsFalse(): Question;
+```
+
+- **Description:** Returns false instead of failing when exception occurrs.
+- **Returns:** `Question` - Returns the current question.
+
+Usage:
+
+```typescript
+// get evaluation result based on valid check
+const evaluationResult = await actor.asks(
+    MyQuestion.is.asExpected().failAsFalse,
+);
+// do whatever necessary with the result
+```
+
+### withAbilityAlias
+
+*Introduced in core: 0.3.0*
+
+```typescript
+public withAbilityAlias(alias: string): Question;
+```
+
+- **Description:** Defines the ability alias to be used during execution.
+- **Parameters:**
+  - `alias` - The alias.
+- **Returns:** `Question` - Returns the current question.
+
+Usage:
+
+```typescript
+await actor.asks(
+    MyQuestion.is.asExpected().withAbilityAlias('myAlias'),
+);
+```

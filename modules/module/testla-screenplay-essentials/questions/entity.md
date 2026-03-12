@@ -2,9 +2,9 @@
 
 The `Entity` class provides a way to verify if an entity/object has a desired attribute optinally with a desired value. It allows for positive and negative checks. This class extends the `Question<boolean>` class. Entity does not rely on any specific Ability.
 
-## Extends
+import QuestionExtendCore from '../../../_question-extend-core.mdx';
 
-This class extends the `Question<boolean>` class, providing specific functionality for verifying states of a given entity/object.
+<QuestionExtendCore />
 
 ## Methods
 
@@ -105,23 +105,6 @@ await actor.asks(
 );
 ```
 
-### failAsFalse
+import QuestionMethodsInheritedFromCore from '../../../_question-methods-inherited-from-core.mdx';
 
-*Introduced in: 1.0.0*
-
-```typescript
-public get failAsFalse(): Entity;
-```
-
-- **Description:** Returns false instead of failing when exception occurrs.
-- **Returns:** `Entity` - Returns the current question.
-
-Usage:
-
-```typescript
-// get evaluation result based on valid check
-const evaluationResult = await actor.asks(
-    Entity.has.attribute(myArray, 'length').failAsFalse,
-);
-// do whatever necessary with the result
-```
+<QuestionMethodsInheritedFromCore />
