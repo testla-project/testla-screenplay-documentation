@@ -39,6 +39,11 @@ jobs:
 
       - name: Build Docusaurus (Preview)
         run: npm run build
+        if: github.event.action != 'closed'
+        env:
+          DEPLOY_URL: https://testla-screenplay.github.io
+          # Wichtig: BaseURL muss den Preview-Pfad enthalten
+          BASE_URL: /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/
 
       - name: Deploy / Remove Preview
         uses: rossjrw/pr-preview-action@v1
