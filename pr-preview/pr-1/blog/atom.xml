@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://testla-screenplay.github.io/pr-preview/pr-1/blog</id>
+    <id>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog</id>
     <title>Testla Screenplay Blog</title>
     <updated>2026-03-11T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://testla-screenplay.github.io/pr-preview/pr-1/blog"/>
+    <link rel="alternate" href="https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog"/>
     <subtitle>Testla Screenplay Blog</subtitle>
-    <icon>https://testla-screenplay.github.io/pr-preview/pr-1/img/favicon.ico</icon>
+    <icon>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to Testla Screenplay]]></title>
-        <id>https://testla-screenplay.github.io/pr-preview/pr-1/blog/welcome</id>
-        <link href="https://testla-screenplay.github.io/pr-preview/pr-1/blog/welcome"/>
+        <id>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog/welcome</id>
+        <link href="https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog/welcome"/>
         <updated>2026-03-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Testla Screenplay is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.]]></summary>
         <content type="html"><![CDATA[<p><strong>Testla Screenplay</strong> is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.</p>
