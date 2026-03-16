@@ -1,0 +1,27 @@
+## Methods inherited from FrameEnabledQuestion
+
+### inFrame
+
+*Introduced in: 1.3.0*
+
+```typescript
+public inFrame(frameSelector: FrameSelector): Check;
+```
+
+- **Description:** Finds the specified frame selector using the `BrowseTheWeb` ability.
+- **Parameters:**
+  - `frameSelector` - The FrameSelector.
+- **Returns:** `Question` - Returns the current question.
+
+
+Usage:
+
+```typescript
+await actor.asks(
+    MyQuestion.is.asExpected().inFrame('#myFrame'),
+);
+```
+
+import QuestionMethodsInheritedFromCore from '../../../../_question-methods-inherited-from-core.mdx';
+
+<QuestionMethodsInheritedFromCore />

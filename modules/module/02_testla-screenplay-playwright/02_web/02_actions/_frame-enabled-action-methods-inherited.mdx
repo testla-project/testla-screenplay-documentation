@@ -1,0 +1,27 @@
+## Methods inherited from FrameEnabledAction
+
+### inFrame
+
+*Introduced in: 1.3.0*
+
+```typescript
+public inFrame(frameSelector: FrameSelector): Check;
+```
+
+- **Description:** Finds the specified frame selector using the `BrowseTheWeb` ability.
+- **Parameters:**
+  - `frameSelector` - The FrameSelector.
+- **Returns:** `Action` - Returns the current action.
+
+
+Usage:
+
+```typescript
+await actor.attemptsTo(
+    Find.element('#myElement').inFrame('#myFrame'),
+);
+```
+
+import ActionMethodsInheritedFromCore from '../../../../_action-methods-inherited-from-core.mdx';
+
+<ActionMethodsInheritedFromCore />
