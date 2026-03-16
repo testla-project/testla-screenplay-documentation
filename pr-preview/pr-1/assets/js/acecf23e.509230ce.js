@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunktestla_screenplay_documentation=globalThis.webpackChunktestla_screenplay_documentation||[]).push([[1903],{1912(t){t.exports=JSON.parse('{"blogBasePath":"/testla-screenplay-documentation/blog","blogTitle":"Blog","authorsListPath":"/testla-screenplay-documentation/blog/authors"}')}}]);

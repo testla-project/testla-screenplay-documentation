@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunktestla_screenplay_documentation=globalThis.webpackChunktestla_screenplay_documentation||[]).push([[4541],{189(e){e.exports=JSON.parse('{"tags":[{"label":"Testla Screenplay","permalink":"/testla-screenplay-documentation/blog/tags/testla-screenplay","description":"Testla Screenplay","count":1}]}')}}]);

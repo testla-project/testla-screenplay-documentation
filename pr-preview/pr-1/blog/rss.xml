@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Testla Screenplay Blog</title>
-        <link>https://testla-project.github.io/testla-screenplay-documentation/blog</link>
+        <link>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog</link>
         <description>Testla Screenplay Blog</description>
         <lastBuildDate>Wed, 11 Mar 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Welcome to Testla Screenplay]]></title>
-            <link>https://testla-project.github.io/testla-screenplay-documentation/blog/welcome</link>
-            <guid>https://testla-project.github.io/testla-screenplay-documentation/blog/welcome</guid>
+            <link>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog/welcome</link>
+            <guid>https://testla-project.github.io/testla-screenplay-documentation/pr-preview/pr-1/blog/welcome</guid>
             <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Testla Screenplay is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.]]></description>
             <content:encoded><![CDATA[<p><strong>Testla Screenplay</strong> is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.</p>
