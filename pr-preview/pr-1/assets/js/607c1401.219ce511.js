@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunktestla_screenplay_documentation=globalThis.webpackChunktestla_screenplay_documentation||[]).push([[1457],{5815(e){e.exports=JSON.parse('{"metadata":{"permalink":"/testla-screenplay-documentation/pr-preview/pr-1/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
