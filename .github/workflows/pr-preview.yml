@@ -2,20 +2,15 @@ name: PR Preview
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - closed
+    types: [opened, synchronize, reopened, closed]
 
-# Verhindert Race-Conditions bei schnell aufeinanderfolgenden Pushes
 concurrency:
   group: pages-preview-pr-${{ github.event.number }}
   cancel-in-progress: true
 
 permissions:
-  contents: write        # Schreibt auf den gh-pages Branch
-  pull-requests: write   # Kommentiert im PR
+  contents: write
+  pull-requests: write
 
 jobs:
   preview:
@@ -30,7 +25,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-        # Build nur wenn PR geöffnet/aktualisiert, nicht beim Schließen
         if: github.event.action != 'closed'
 
       - name: Install dependencies
@@ -41,15 +35,13 @@ jobs:
         run: npm run build
         if: github.event.action != 'closed'
         env:
+          # Deine Ziel-URL
           DEPLOY_URL: https://testla-screenplay.github.io
-          # Wichtig: BaseURL muss den Preview-Pfad enthalten
-          BASE_URL: /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/
+          # Der Pfad für die PR-Vorschau (OHNE Repo-Namen, falls die Domain direkt darauf zeigt)
+          BASE_URL: /pr-preview/pr-${{ github.event.number }}/
 
       - name: Deploy / Remove Preview
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: build/
-          # Optionale Anpassungen:
-          # preview-branch: gh-pages   # Ziel-Branch (Standard: gh-pages)
-          # umbrella-dir: pr-preview   # Ordner im Branch (Standard: pr-preview)
-          # token: ${{ secrets.GITHUB_TOKEN }}
+          # Die Action erkennt automatisch, ob gelöscht (PR closed) oder hochgeladen werden muss.

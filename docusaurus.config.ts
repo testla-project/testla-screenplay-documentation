@@ -3,6 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const baseUrl = process.env.BASE_URL || '/';
 
 const config: Config = {
   title: 'Testla Screenplay',
@@ -18,12 +19,12 @@ const config: Config = {
   url: 'https://testla-screenplay.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'testla', // Usually your GitHub org/user name.
-  projectName: 'screenplay', // Usually your repo name.
+  organizationName: 'testla-project', // Usually your GitHub org/user name.
+  projectName: 'testla-screenplay-documentation', // Usually your repo name.
 
   // onBrokenLinks: 'throw',
   onBrokenLinks: 'warn',
@@ -45,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/testla/screenplay/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +57,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/testla/screenplay/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
