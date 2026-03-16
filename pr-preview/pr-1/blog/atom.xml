@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://testla-screenplay.github.io/blog</id>
+    <title>Testla Screenplay Blog</title>
+    <updated>2026-03-11T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://testla-screenplay.github.io/blog"/>
+    <subtitle>Testla Screenplay Blog</subtitle>
+    <icon>https://testla-screenplay.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome to Testla Screenplay]]></title>
+        <id>https://testla-screenplay.github.io/blog/welcome</id>
+        <link href="https://testla-screenplay.github.io/blog/welcome"/>
+        <updated>2026-03-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Testla Screenplay is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.]]></summary>
+        <content type="html"><![CDATA[<p><strong>Testla Screenplay</strong> is a free and open-source acceptance testing library that can help you establish a clear link between the expected business functionality and the actual working state of your software system.</p>
+<p>We've designed Testla Screenplay to make it easier for you to create test scenarios that build a shared understanding and trust between your business sponsors and delivery teams and to help you prove that your system meets and continues to meet its requirements.</p>
+<p>It enables you to create multi-actor acceptance and regression tests that captures your <strong>domain vocabulary</strong>, model your <strong>business workflows</strong>, and help you write <strong>high-quality test automation code</strong> you can reuse across projects and teams.</p>]]></content>
+        <author>
+            <name>Kenji Brückner</name>
+        </author>
+        <author>
+            <name>Patrick Döring</name>
+        </author>
+        <category label="Testla Screenplay" term="Testla Screenplay"/>
+    </entry>
+</feed>
