@@ -38,7 +38,7 @@ jobs:
           # Deine Ziel-URL
           DEPLOY_URL: https://testla-project.github.io
           # Der Pfad für die PR-Vorschau (OHNE Repo-Namen, falls die Domain direkt darauf zeigt)
-          BASE_URL: /testla-screenplay-documentation/
+          BASE_URL: /testla-screenplay-documentation/pr-preview/pr-${{ github.event.number }}/
 
       - name: Deploy / Remove Preview
         uses: rossjrw/pr-preview-action@v1
