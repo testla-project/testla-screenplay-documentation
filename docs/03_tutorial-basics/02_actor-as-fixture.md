@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Define Actor as PW Fixture
 
 ## Introduction
@@ -35,24 +31,24 @@ const createUser = async (browser: Browser, request: APIRequestContext, actorNam
 
 // Define the types of actors
 type Actors = {
+    Bob: Actor;
+    Alice: Actor;
     Andy: Actor;
-    Ute: Actor;
-    Armin: Actor;
 };
 
 // Define test fixtures for each actor
 export const test = base.extend<Actors>({
+    Bob: async ({ browser, request }, use) => {
+        const Bob = await createUser(browser, request, 'Bob', `${process.env.BOB_USER_NAME}`, `${process.env.BOB_USER_PASSWORD}`);
+        await use(Bob);
+    },
+    Alice: async ({ browser, request }, use) => {
+        const Alice = await createUser(browser, request, 'Alice', `${process.env.ALICE_USER_NAME}`, `${process.env.ALICE_USER_PASSWORD}`);
+        await use(Alice);
+    },
     Andy: async ({ browser, request }, use) => {
         const Andy = await createUser(browser, request, 'Andy', `${process.env.ANDY_USER_NAME}`, `${process.env.ANDY_USER_PASSWORD}`);
         await use(Andy);
-    },
-    Ute: async ({ browser, request }, use) => {
-        const Ute = await createUser(browser, request, 'Ute', `${process.env.UTE_USER_NAME}`, `${process.env.UTE_USER_PASSWORD}`);
-        await use(Ute);
-    },
-    Armin: async ({ browser, request }, use) => {
-        const Armin = await createUser(browser, request, 'Armin', `${process.env.ARMIN_USER_NAME}`, `${process.env.ARMIN_USER_PASSWORD}`);
-        await use(Armin);
     },
 });
 
@@ -64,23 +60,23 @@ export { expect } from '@playwright/test';
 
 The code above defines a function `createUser` that creates an actor with both Web browsing and API capabilities. It uses Playwright's Browser and APIRequestContext to create a new page for web browsing and adds the necessary `abilities` for interacting with the Web and API.
 
-The test object is a test fixture that extends Playwright's base test object. It defines three actors (Andy, Ute, and Armin) and provides fixtures for creating them with the `createUser` function. Each actor is associated with specific environment variables for the username and password.
+The test object is a test fixture that extends Playwright's base test object. It defines three actors (Bob, Alice and Andy) and provides fixtures for creating them with the `createUser` function. Each actor is associated with specific environment variables for the username and password.
 
 The exported test object also includes the expect function from the Playwright test library.
 
-In the provided example of using an actor in a test, the Andy actor is used to perform login actions and assertions. Multiple actors can be used in a single test, each with its own set of interactions and expectations.
+In the provided example of using an actor in a test, the Bob actor is used to perform login actions and assertions. Multiple actors can be used in a single test, each with its own set of interactions and expectations.
 
 ## Using an actor
 
 Just mention the `actor` in your test function argument, and test runner will take care of it. Fixtures are also available in hooks and other fixtures. If you use TypeScript, fixtures will have the right type.
 
-Below we use the actor `Andy` as defined above.
+Below we use the actor `Bob` as defined above.
 
 ```typescript
 test.describe('Login to application', () => {
-    test('can login', async ({ Andy }) => {
-        await Andy.attemptsTo(Login.toApp());
-        await Andy.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
+    test('can login', async ({ Bob }) => {
+        await Bob.attemptsTo(Login.toApp());
+        await Bob.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
     });
 });
 ```
@@ -89,12 +85,12 @@ You can also use multiple actors from above in one test
 
 ```typescript title="test"
 test.describe('Login to application', () => {
-    test('can login', async ({ Andy, Armin }) => {
-        await Andy.attemptsTo(Login.toApp());
-        await Andy.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
+    test('can login', async ({ Bob, Andy }) => {
+        await Bob.attemptsTo(Login.toApp());
+        await Bob.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
 
-        await Armin.attemptsTo(Login.toApp());
-        await Armin.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
+        await Andy.attemptsTo(Login.toApp());
+        await ANdy.asks(Element.toBe.visible(HomeScreen.LOGGED_IN_INDICATOR));
     });
 });
 ```

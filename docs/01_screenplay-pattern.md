@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Screenplay Pattern Overview
 
 The Screenplay Pattern is a design pattern for automatic interacting with software products. It can handle any type of interaction - (Web-) UI, API, etc. Test automation is the most popular use case for the pattern.

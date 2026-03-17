@@ -4,6 +4,11 @@
 
 *Introduced in: 1.3.0*
 
+A webpage may be associated with multiple Frame objects. Each webpage possesses a primary frame and interactions at the page level 
+such as clicking, are typically performed within this main frame. In addition to the main frame, a webpage can incorporate extra 
+frames using the HTML 'iframe' tag. These supplementary frames can be targeted for interactions occurring within the specific frame. To reach elements in those frames you can use the `inFrame()` method to find the specified frame selector using the `BrowseTheWeb` ability.
+You can also chain frame objects to go down to the inner most iframe using the `inFrame()` API. Be aware the sequence starts with outer most iframe and goes down to inner most iframe.
+
 ```typescript
 public inFrame(frameSelector: FrameSelector): Check;
 ```
@@ -13,12 +18,19 @@ public inFrame(frameSelector: FrameSelector): Check;
   - `frameSelector` - The FrameSelector.
 - **Returns:** `Question` - Returns the current question.
 
-
 Usage:
 
 ```typescript
+// Find an element in a specific frame
 await actor.asks(
     MyQuestion.is.asExpected().inFrame('#myFrame'),
+);
+
+// Find an element in nested frames
+await actor.asks(
+    MyQuestion.is.asExpected()
+        .inFrame('[name="frameTop"]')
+        .inFrame('[name="frameMiddle"]'),
 );
 ```
 
