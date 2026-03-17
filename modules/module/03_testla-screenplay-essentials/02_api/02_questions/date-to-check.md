@@ -2,7 +2,7 @@
 
 The `DateToCheck` class provides a way to verify if a date is valid or how it compares to a compare date (before, equal, after). It allows for positive and negative checks. This class extends the `Question<boolean>` class. DateToCheck does not rely on any specific Ability.
 
-import QuestionExtendCore from '../../../_question-extend-core.mdx';
+import QuestionExtendCore from '../../../../_question-extend-core.mdx';
 
 <QuestionExtendCore />
 
@@ -195,6 +195,6 @@ await actor.asks(
 );
 ```
 
-import QuestionMethodsInheritedFromCore from '../../../_question-methods-inherited-from-core.mdx';
+import QuestionMethodsInheritedFromCore from '../../../../_question-methods-inherited-from-core.mdx';
 
 <QuestionMethodsInheritedFromCore />
