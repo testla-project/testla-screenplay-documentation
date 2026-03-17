@@ -56,5 +56,3 @@ The `Entity` class has static factory methods called `has` and `hasNot` that cre
 The `attributeValue` method sets the payload with the `object`, `attribute` and `value` that will be used in the `answeredBy` method. This method allows setting the parameters for the question in a fluent manner. 
 
 This custom question, demonstrates how you can implement reusable and expressive questions in the Screenplay Pattern. It provides a flexible way to check whether a certain attribute of an object has a specific value and supports both positive and negative assertions. 
-
-[Back to overview](../guides.md)
