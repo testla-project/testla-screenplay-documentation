@@ -45,8 +45,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
+          // editUrl:
+          //   'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -56,8 +56,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
+          // editUrl:
+          //   'https://github.com/testla-project/testla-screenplay-documentation/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -87,6 +87,8 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: true,
     },
     navbar: {
       title: 'Testla Screenplay',
@@ -109,11 +111,11 @@ const config: Config = {
             label: 'Modules',
           },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/testla/screenplay',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // {
+        //   href: 'https://github.com/testla/screenplay',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
@@ -123,9 +125,17 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Screenplay Pattern Overview',
+              to: '/docs/screenplay-pattern',
             },
+            {
+              label: 'Getting Started',
+              to: '/docs/install',
+            },
+            {
+              label: 'Tutorials',
+              to: '/docs/category/tutorial---basics',
+            }
           ],
         },
         {
@@ -137,7 +147,7 @@ const config: Config = {
             // },
             {
               label: 'Discord',
-              href: 'https://discord.gg/MDRjCH3v',
+              href: 'https://discord.com/channels/1194567305489813554/1194607548427411467',
             },
             // {
             //   label: 'X',
@@ -152,10 +162,10 @@ const config: Config = {
               label: 'Blog',
               to: '/blog',
             },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/testla-project',
-            },
+            // {
+            //   label: 'GitHub',
+            //   href: 'https://github.com/testla-project',
+            // },
             {
               label: 'Credits',
               to: '/credits',
@@ -163,7 +173,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Testla Screenplay Project, Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Testla Screenplay Project`,
     },
     prism: {
       theme: prismThemes.github,
