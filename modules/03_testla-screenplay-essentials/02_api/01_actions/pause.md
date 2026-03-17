@@ -4,7 +4,7 @@ The `Pause` class is an useful action for introducing delays in test scenarios, 
 
 This Action does not rely on a specific Ability.
 
-import ActionExtendCore from '../../../../_action-extend-core.mdx';
+import ActionExtendCore from '../../../_action-extend-core.mdx';
 
 <ActionExtendCore />
 
@@ -42,6 +42,6 @@ await actor.attemptsTo(
 );
 ```
 
-import ActionMethodsInheritedFromCore from '../../../../_action-methods-inherited-from-core.mdx';
+import ActionMethodsInheritedFromCore from '../../../_action-methods-inherited-from-core.mdx';
 
 <ActionMethodsInheritedFromCore />
