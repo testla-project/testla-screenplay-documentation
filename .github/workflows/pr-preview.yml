@@ -39,7 +39,14 @@ jobs:
           DEPLOY_URL: https://testla-project.github.io
           # Der Pfad für die PR-Vorschau (OHNE Repo-Namen, falls die Domain direkt darauf zeigt)
           BASE_URL: /testla-screenplay-documentation/pr-preview/pr-${{ github.event.number }}/
-
+      - name: Deploy 404 to gh-pages root
+        if: github.event.action != 'closed'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
+          destination_dir: .
+          keep_files: true
       - name: Deploy / Remove Preview
         uses: rossjrw/pr-preview-action@v1
         with:
