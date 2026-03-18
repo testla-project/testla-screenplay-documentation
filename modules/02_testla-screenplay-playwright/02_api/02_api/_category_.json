@@ -1,7 +1,3 @@
 {
-  "label": "API",
-  "link": {
-    "type": "generated-index",
-    "description": "The following elements are available for API testing."
-  }
+  "label": "API"
 }

@@ -108,7 +108,8 @@ const config: Config = {
             sidebarId: 'modulesSidebar',
             docsPluginId: 'modules',
             position: 'left',
-            label: 'Modules',
+            label: 'Modules & API',
+            href: '/modules/testla-screenplay-playwright/introduction'
           },
         {to: '/blog', label: 'Blog', position: 'left'},
         // {
