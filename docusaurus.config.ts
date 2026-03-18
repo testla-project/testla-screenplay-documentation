@@ -130,11 +130,11 @@ const config: Config = {
             },
             {
               label: 'Getting Started',
-              to: '/docs/install',
+              to: '/docs/getting-started',
             },
             {
               label: 'Tutorials',
-              to: '/docs/category/tutorial---basics',
+              to: '/docs/tutorial-basics/introduction',
             }
           ],
         },
