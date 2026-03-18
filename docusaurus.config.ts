@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const baseUrl = process.env.BASE_URL || '/';
 
 const config: Config = {
-  title: 'Testla Screenplay',
-  tagline: 'Testing via Screenplay Pattern',
+  title: 'Write tests your business can read',
+  tagline: 'Stop writing brittle UI tests. Leverage the Screenplay Pattern to keep your test suite maintainable, extensible, and scalable',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
