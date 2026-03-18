@@ -1,4 +1,4 @@
-# Define Actor as PW Fixture
+# Define Actor as Playwright Fixture
 
 ## Introduction
 
