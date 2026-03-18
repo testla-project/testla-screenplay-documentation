@@ -5,7 +5,7 @@ The `Sleep` class is an useful action for introducing delays in test scenarios, 
 This Action does not rely on a specific Ability.
 
 :::info
-This action is deprecated and will be removed in the future. Please use [`Pause`](/modules/module/testla-screenplay-essentials/actions/pause) from [`Testla Screenplay Essentials`](/modules/module/testla-screenplay-essentials/introduction) instead.
+This action is deprecated and will be removed in the future. Please use [`Pause`](/modules/testla-screenplay-essentials/api/actions/pause) from [`Testla Screenplay Essentials`](/modules/testla-screenplay-essentials/introduction) instead.
 :::
 
 import ActionExtendCore from '../../../../_action-extend-core.mdx';

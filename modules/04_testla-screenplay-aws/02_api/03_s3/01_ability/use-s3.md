@@ -55,3 +55,7 @@ public static as(actor: Actor, alias?: string): UseS3
   - `actor` - The actor object.
   - `alias` - (Optional) The alias for the ability
 - **Returns:** `UseS3` - The ability to use S3 as the actor, optionally with an alias name.
+
+import AbilityMethodsInheritedFromCore from '../../../../_ability-methods-inherited-from-core.mdx';
+
+<AbilityMethodsInheritedFromCore />

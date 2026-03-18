@@ -55,3 +55,7 @@ public static as(actor: Actor, alias?: string): UseKinesis
   - `actor` - The actor object.
   - `alias` - (Optional) The alias for the ability
 - **Returns:** `UseKinesis` - The ability to use Kinesis as the actor, optionally with an alias name.
+
+import AbilityMethodsInheritedFromCore from '../../../../_ability-methods-inherited-from-core.mdx';
+
+<AbilityMethodsInheritedFromCore />

@@ -112,3 +112,7 @@ public checkDuration(response: Response, duration: number, mode: 'lessOrEqual' |
   - `duration` - Expected duration (in milliseconds) not to be exceeded.
   - `mode` - The result to check for ('lessOrEqual' or 'greater').
 - **Returns:** `Promise<boolean>` - True if the response was received within the given duration, false otherwise.
+
+import AbilityMethodsInheritedFromCore from '../../../../_ability-methods-inherited-from-core.mdx';
+
+<AbilityMethodsInheritedFromCore />

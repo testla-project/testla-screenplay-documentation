@@ -55,3 +55,7 @@ public static as(actor: Actor, alias?: string): UseBatch
   - `actor` - The actor object.
   - `alias` - (Optional) The alias for the ability
 - **Returns:** `UseBatch` - The ability to use batch as the actor, optionally with an alias name.
+
+import AbilityMethodsInheritedFromCore from '../../../../_ability-methods-inherited-from-core.mdx';
+
+<AbilityMethodsInheritedFromCore />

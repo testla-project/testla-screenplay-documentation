@@ -11,7 +11,7 @@ The solution Testla Screenplay offers is `Ability Aliasing`. With that multiple 
 ```javascript
     Actor
         .can(Ability.using(SETTINGS_1))
-        .can(Ability.using(SETTINGS_2)).withAlias('aliased');
+        .can(Ability.using(SETTINGS_2).withAlias('aliased'));
 ```
 
 Puts 2 instances of an Ability with different configuration into the Actors internal ability map.

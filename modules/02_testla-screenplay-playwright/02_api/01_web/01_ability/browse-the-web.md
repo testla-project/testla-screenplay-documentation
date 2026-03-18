@@ -53,3 +53,7 @@ public resolveSelectorToLocator(): Page;
   - `options` - (optional) Advanced selector lookup options.
   - `frameTree` - An array of frame selector(s).
 - **Returns:** `Promise<Locator>` - Returns resolved Locator(s) as per Playwright definition.
+
+import AbilityMethodsInheritedFromCore from '../../../../_ability-methods-inherited-from-core.mdx';
+
+<AbilityMethodsInheritedFromCore />
