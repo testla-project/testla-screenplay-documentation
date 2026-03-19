@@ -1,0 +1,77 @@
+### setCallStackInitializeCalledWith
+
+This methods is used to announce the parameters the initial object instanciation is called with.
+
+:::info
+Ensure that you use this function for custom screenplay elements to ensure proper logging.
+:::
+
+*Introduced in core: 0.4.0*
+
+```typescript
+public setCallStackInitializeCalledWith(calledWith: CallStackCalledWith): void
+```
+
+- **Description:** Sets the call stack to be used during initialization.
+- **Parameters:**
+  - `calledWith` - The parameters for the initializing static function.
+- **Returns:** `void` - Does not return a value.
+
+
+Usage:
+
+```typescript title="Do.ts"
+// called like Do.something(myInput);
+public static something(input: any): Do {
+    const instance = new Do(input);
+    instance.setCallStackInitializeCalledWith({ input });
+    return instance;
+}
+```
+
+### addToCallStack
+
+This methods is used to announce callstack information for subsequent chaned functions to enhance the operation.
+
+:::info
+Ensure that you use this function for custom screenplay elements to ensure proper logging.
+:::
+
+*Introduced in core: 0.4.0*
+
+```typescript
+public addToCallStack(entry: CallStackInfo): void
+```
+
+- **Description:** Adds CallStackInfo to the internal call stack
+- **Parameters:**
+  - `entry` - The CallStackInfo to add.
+- **Returns:** `void` - Does not return a value.
+
+Usage:
+
+```typescript title="Do.ts"
+// called like Do.something().withData(data);
+public withData(data: any): this {
+    this.data = data;
+    this.addToCallStack({ caller: 'withData', calledWith: { data } });
+    return this;
+}
+```
+
+### getCallStack
+
+:::info
+This functions is used in the internal flow. It is not meant to be used in custom code.
+Its purpose is to support the core's logging capabilities.
+:::
+
+*Introduced in core: 0.4.0*
+
+```typescript
+public addToCallStack(entry: CallStackInfo): void
+```
+
+- **Description:** Gets the internal callstack.
+- **Returns:** `CallStackInfo[]` - The internal callstack state.
+
