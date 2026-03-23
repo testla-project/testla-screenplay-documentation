@@ -15,5 +15,5 @@ testlaScreenplayEventEmitter.on('logEvent', (event: LogEvent) => {
 ```
 
 :::info
-In some cases it is not possible to listen to the event emitter i.e. with a setup of main and worker processes - an example for that is Playwright.
+Also see our documentation for debug logs section: [Creating a custom Logger](http://localhost:3001/docs/debug-logs#creating-a-custom-logger)
 :::
