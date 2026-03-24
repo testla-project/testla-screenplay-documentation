@@ -11,7 +11,7 @@ function TerminalDemo() {
   return (
     <iframe
       src={src}
-      style={{ width: '100%', height: 340, border: 'none', borderRadius: 8 }}
+      style={{ width: '100%', height: 350, border: 'none', borderRadius: 8 }}
     />
   );
 }
@@ -38,41 +38,41 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     eyebrow: 'Setup in seconds',
-    title: 'One command. Ready to test',
-    description: 'Get a fully configured Testla-Screenplay setup in seconds. Interactive, guided, and ready to scale.',
+    title: 'One command. Ready to test.',
+    description: 'Get a fully configured Screenplay setup in seconds. Interactive, guided, and ready to scale.',
     cta: { label: 'Getting started', to: '/docs/install' },
     visual: <TerminalDemo />,
   },
   {
     eyebrow: 'Screenplay Pattern',
-    title: 'Tests that read like a story',
+    title: 'Tests that read like a story.',
     description: 'Write tests so expressive that any developer on your team instantly understands what is being tested — and why.',
-    cta: { label: 'Check the basic tutorial', to: '/docs/category/tutorial---basics-1' },
+    cta: { label: 'Read the docs', to: '/docs/category/tutorial---basics-1' },
     visual: (
-      <CodeBlock language="typescript" title="login.spec.ts">
-        {`const Alice = Actor.named('Alice')
-  .can(BrowseTheWeb.using(browser));
+      <div style={{ height: 350, overflow: 'hidden' }}>
+        <CodeBlock language="typescript" title="login.spec.ts">
+          {`test('Login to app', async ({ Bob }) => {
+  // Execute the task Login.toApp() and another one
+  await Bob.attemptsTo(
+    Login.toApp(),
+    TheSecondTask.doSomething(),
+  );
 
-await Alice.attemptsTo(
-  Navigate.to('https://example.com'),
-  Click.on(LoginButton),
-  Enter.theValue('alice@example.com')
-    .into(EmailField),
-  Click.on(SubmitButton),
-);
-
-await Alice.asks(
-  See.if(Text.of(WelcomeMessage))
-    .is('Welcome, Alice!'),
-);`}
-      </CodeBlock>
+  // Ask for a specific element is visible to validate the task execution was successfull
+  await Bob.asks(
+    Element.toBe.visible(HomeScreen.TASK_INDICATOR)
+  );
+});
+`}
+        </CodeBlock>
+      </div>
     ),
   },
   {
     eyebrow: 'Analyze your results',
-    title: 'HTML reports out of the box',
+    title: 'Beautiful reports out of the box.',
     description: 'Get detailed HTML reports with a single config line. See exactly what passed, failed, and why.',
-    cta: { label: 'Learn more', to: '/modules/module/testla-screenplay-playwright/reporters' },
+    cta: { label: 'Browse modules', to: '/modules/module/testla-screenplay-playwright/reporters' },
     visual: <ReportScreenshot />,
   },
 ];

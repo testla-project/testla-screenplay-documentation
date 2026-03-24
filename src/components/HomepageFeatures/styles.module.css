@@ -4,7 +4,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 3rem;
   max-width: 100%;
 }
@@ -13,11 +13,21 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  min-width: 0;
 }
 
 .featureVisual {
   border-radius: 8px;
   overflow: hidden;
+  height: 350px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.featureVisual > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .featureBody {
@@ -35,7 +45,7 @@
 }
 
 .featureTitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 700;
   line-height: 1.3;
   margin: 0;
@@ -60,7 +70,26 @@
 }
 
 @media (max-width: 996px) {
+  .features {
+    padding: 3rem 1.5rem 4rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .featureVisual {
+    height: 280px;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1280px) {
+  .features {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .featureVisual {
+    height: 300px;
   }
 }
