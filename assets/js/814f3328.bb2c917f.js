@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktestla_screenplay_documentation=globalThis.webpackChunktestla_screenplay_documentation||[]).push([[7472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome to Testla Screenplay","permalink":"/testla-screenplay-documentation/pr-preview/pr-3/blog/welcome","unlisted":false,"date":"2026-03-11T00:00:00.000Z"}]}')}}]);
