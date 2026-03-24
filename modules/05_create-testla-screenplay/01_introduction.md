@@ -1,7 +1,7 @@
+# Introduction
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-# Create Testla Screenplay CLI Tool
 
 A CLI tool offering a setup routine for Testla Screenplay allowing you to pick the needed packages during the install process. It creates a full project folder structure with sample Screenplay elements like Actions and Questions so that you can start writing test code right away without going through a complicated manual setup phase.
 

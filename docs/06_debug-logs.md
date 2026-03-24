@@ -119,8 +119,8 @@ if (checkIfLogEvent(line)) {
 }
 ```
 
+With that you have the access to the same information/event as if it was emitted by the event emitter. 
+
 :::info
 Testla Screenplay Playwright Reporters are built on the above mentioned feature.
 :::
-
-With that you have the access to the same information/event as if it was emitted by the event emitter. 
