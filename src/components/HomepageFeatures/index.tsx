@@ -1,53 +1,91 @@
-import type {ReactNode} from 'react';
+import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import CodeBlock from '@theme/CodeBlock';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
+function TerminalDemo() {
+  const src = useBaseUrl('terminal-demo.html');
+  return (
+    <iframe
+      src={src}
+      style={{ width: '100%', height: 350, border: 'none', borderRadius: 8 }}
+    />
+  );
+}
+
+function ReportScreenshot() {
+  const src = useBaseUrl('testla-report.png');
+  return (
+    <img
+      src={src}
+      alt="Testla Report"
+      style={{ width: '100%', display: 'block', borderRadius: 8 }}
+    />
+  );
+}
+
 type FeatureItem = {
+  eyebrow: string;
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
+  description: string;
+  cta: { label: string; to: string };
+  visual: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Write test in Screenplay Pattern',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Write your tests in a clear and concise way, using the Screenplay Pattern. This pattern allows you to write your tests in a way that is easy to read and understand, making it easier to maintain and scale your test suite.
-      </>
+    eyebrow: 'Setup in seconds',
+    title: 'One command. Ready to test.',
+    description: 'Get a fully configured Screenplay setup in seconds. Interactive, guided, and ready to scale.',
+    cta: { label: 'Getting started', to: '/docs/install' },
+    visual: <TerminalDemo />,
+  },
+  {
+    eyebrow: 'Screenplay Pattern',
+    title: 'Tests that read like a story.',
+    description: 'Write tests so expressive that any developer on your team instantly understands what is being tested — and why.',
+    cta: { label: 'Read the docs', to: '/docs/category/tutorial---basics-1' },
+    visual: (
+      <div style={{ height: 350, overflow: 'hidden' }}>
+        <CodeBlock language="typescript" title="login.spec.ts">
+          {`test('Login to app', async ({ Bob }) => {
+  // Execute the task Login.toApp() and another one
+  await Bob.attemptsTo(
+    Login.toApp(),
+    TheSecondTask.doSomething(),
+  );
+
+  // Ask for a specific element is visible to validate the task execution was successfull
+  await Bob.asks(
+    Element.toBe.visible(HomeScreen.TASK_INDICATOR)
+  );
+});
+`}
+        </CodeBlock>
+      </div>
     ),
   },
   {
-    title: 'Lean Core',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Lean Core which builds the foundation for all Testla Screenplay modules, providing the core functionalities and abstractions for the Screenplay Pattern.
-      </>
-    ),
-  },
-  {
-    title: 'Various Modules',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Various modules for your specific needs allow you to only import what you really need.
-      </>
-    ),
+    eyebrow: 'Analyze your results',
+    title: 'Beautiful reports out of the box.',
+    description: 'Get detailed HTML reports with a single config line. See exactly what passed, failed, and why.',
+    cta: { label: 'Browse modules', to: '/modules/module/testla-screenplay-playwright/reporters' },
+    visual: <ReportScreenshot />,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ eyebrow, title, description, cta, visual }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={styles.featureCard}>
+      <div className={styles.featureVisual}>{visual}</div>
+      <div className={styles.featureBody}>
+        <span className={styles.eyebrow}>{eyebrow}</span>
+        <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+        <p className={styles.featureDescription}>{description}</p>
+        <Link className={styles.cta} to={cta.to}>{cta.label} →</Link>
       </div>
     </div>
   );
@@ -56,12 +94,10 @@ function Feature({title, Svg, description}: FeatureItem) {
 export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+      <div className={styles.grid}>
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} />
+        ))}
       </div>
     </section>
   );
