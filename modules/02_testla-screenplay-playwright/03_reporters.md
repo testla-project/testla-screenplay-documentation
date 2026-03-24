@@ -28,6 +28,17 @@ reporter: [
 ],
 ```
 
+import ExampleReportLoader from './_example-report-loader.mdx';
+
+The generated text report will look like follows:
+
+<details>
+<summary>Click to expand example text report output</summary>
+
+<ExampleReportLoader type="txt" />
+
+</details>
+
 ## JSON Reporter
 
 *Introduced in: 1.8.0*
@@ -47,6 +58,15 @@ reporter: [
     // other reporters
 ],
 ```
+
+The generated JSON report will look like follows:
+
+<details>
+<summary>Click to expand example JSON report output</summary>
+
+<ExampleReportLoader type="json" />
+
+</details>
 
 ## HTML Reporter
 
