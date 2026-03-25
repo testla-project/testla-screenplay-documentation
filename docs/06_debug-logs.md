@@ -4,7 +4,7 @@ Testla comes with logging which helps you to debug your test code. When logging 
 
 ## Human readable logs to stdout
 
-To enable logging set the DEBUG environment variable as follows:
+To enable logging set the DEBUG environment variable as followes:
 
 ```typescript
 DEBUG=testla:sp
@@ -106,7 +106,7 @@ import { STRUCTURED_LOGS_ENVVAR_NAME } from '@testla/screenplay'
 process.env[STRUCTURED_LOGS_ENVVAR_NAME] = 'true';
 ```
 
-Stdout can be observed now and a log line can be parsed as follows.
+Stdout can be observed now and a log line can be parsed as followes.
 
 ```typescript
 import { checkIfLogEvent, parseLogEvent, LogEvent } from '@testla/screenplay'

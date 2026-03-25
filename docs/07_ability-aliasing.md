@@ -94,7 +94,7 @@ By nature a Task is a collection of Actions or other Tasks. Therefore the Abilit
     };
 ```
 
-In a second use case it might be desired to only pass down the Ability Alias to some Actions and Tasks. This can be achieved as follows.
+In a second use case it might be desired to only pass down the Ability Alias to some Actions and Tasks. This can be achieved as followes.
 
 ```javascript
     Task.performAs(actor: Actor): Promise<T> {

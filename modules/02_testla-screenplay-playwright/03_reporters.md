@@ -14,7 +14,7 @@ This feature is currently in experimental stage and might see bigger changes.
 
 The text reporter logs all activities in a text file.
 
-To activate the reporter announce it in your `playwright.config.ts` as follows.
+To activate the reporter announce it in your `playwright.config.ts` as followes.
 
 ```typescript
 reporter: [
@@ -45,7 +45,7 @@ The generated text report will look like follows:
 
 The JSON reporter logs all activities in a JSON file.
 
-To activate the reporter announce it in your `playwright.config.ts` as follows.
+To activate the reporter announce it in your `playwright.config.ts` as followes.
 
 ```typescript
 reporter: [
@@ -74,7 +74,7 @@ The generated JSON report will look like follows:
 
 The HTML reporter logs all activities in makes insights about the overall test execution available in a browsable HTML report.
 
-To activate the reporter announce it in your `playwright.config.ts` as follows.
+To activate the reporter announce it in your `playwright.config.ts` as followes.
 
 ```typescript
 reporter: [

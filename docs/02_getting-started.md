@@ -4,7 +4,7 @@ In order to get started writing tests with Testla Screenplay we need to install 
 
 ## Installation via Create Testla Screenplay
 
-The easiest way to do so is to use our install routine CLI toole `Create Testla Screenplay`. It allows you to pick modules as per your convenience, installs all dependencies, configures the project and creates a full folder structure, so that you can start writing tests right away.
+The easiest way to do so is to use our install routine CLI tool `Create Testla Screenplay`. It allows you to pick modules as per your convenience, installs all dependencies, configures the project and creates a full folder structure, so that you can start writing tests right away.
 
 Start the installation as followes based on the package manager of your choice:
 
