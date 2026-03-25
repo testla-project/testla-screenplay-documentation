@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Testla Screenplay"
-      description="Write tests your business can read">
+      description="Stop writing brittle UI tests. Leverage the Screenplay Pattern to keep your test suite maintainable, extensible, and scalable.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
