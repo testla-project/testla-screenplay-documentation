@@ -11,7 +11,7 @@ The solution Testla Screenplay offers is `Ability Aliasing`. With that multiple 
 ```javascript
     Actor
         .can(Ability.using(SETTINGS_1))
-        .can(Ability.using(SETTINGS_2)).withAlias('aliased');
+        .can(Ability.using(SETTINGS_2).withAlias('aliased'));
 ```
 
 Puts 2 instances of an Ability with different configuration into the Actors internal ability map.
@@ -94,7 +94,7 @@ By nature a Task is a collection of Actions or other Tasks. Therefore the Abilit
     };
 ```
 
-In a second use case it might be desired to only pass down the Ability Alias to some Actions and Tasks. This can be achieved as follows.
+In a second use case it might be desired to only pass down the Ability Alias to some Actions and Tasks. This can be achieved as followes.
 
 ```javascript
     Task.performAs(actor: Actor): Promise<T> {

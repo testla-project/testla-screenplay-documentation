@@ -2,6 +2,6 @@
   "label": "Testla Screenplay Modules",
   "link": {
     "type": "generated-index",
-    "description": "The following packages are available. You may want to include/combine them into your test repository as per your projects needs."
+    "description": "The following packages are available. You may want to include them into your test repository as per your projects needs."
   }
 }

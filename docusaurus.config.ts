@@ -7,7 +7,7 @@ const baseUrl = process.env.BASE_URL || '/';
 
 const config: Config = {
   title: 'Write tests your business can read',
-  tagline: 'Stop writing brittle UI tests. Leverage the Screenplay Pattern to keep your test suite maintainable, extensible, and scalable',
+  tagline: 'Stop writing brittle UI tests. Leverage the Screenplay Pattern to keep your test suite maintainable, extensible, and scalable.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -84,7 +84,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
       defaultMode: 'dark',
@@ -108,7 +108,8 @@ const config: Config = {
             sidebarId: 'modulesSidebar',
             docsPluginId: 'modules',
             position: 'left',
-            label: 'Modules',
+            label: 'Modules & API',
+            href: '/modules/testla-screenplay-playwright/introduction'
           },
         {to: '/blog', label: 'Blog', position: 'left'},
         // {
@@ -130,11 +131,11 @@ const config: Config = {
             },
             {
               label: 'Getting Started',
-              to: '/docs/install',
+              to: '/docs/getting-started',
             },
             {
               label: 'Tutorials',
-              to: '/docs/category/tutorial---basics',
+              to: '/docs/tutorial-basics/introduction',
             }
           ],
         },

@@ -1,0 +1,20 @@
+## Methods inherited from Core Ability
+
+### withAlias
+
+*Introduced in core: 0.3.0*
+
+```typescript
+public withAlias(alias: string): Ability;
+```
+
+- **Description:** Defines the ability's alias.
+- **Parameters:**
+  - `alias` - The alias.
+- **Returns:** `Ability` - Returns the current ability.
+
+Usage:
+
+```javascript
+Actor.can(Ability.withAlias('aliased'));
+```

@@ -40,14 +40,14 @@ const FeatureList: FeatureItem[] = [
     eyebrow: 'Setup in seconds',
     title: 'One command. Ready to test.',
     description: 'Get a fully configured Screenplay setup in seconds. Interactive, guided, and ready to scale.',
-    cta: { label: 'Getting started', to: '/docs/install' },
+    cta: { label: 'Getting started', to: '/docs/getting-started' },
     visual: <TerminalDemo />,
   },
   {
     eyebrow: 'Screenplay Pattern',
     title: 'Tests that read like a story.',
     description: 'Write tests so expressive that any developer on your team instantly understands what is being tested — and why.',
-    cta: { label: 'Read the docs', to: '/docs/category/tutorial---basics-1' },
+    cta: { label: 'Read the docs', to: '/docs/tutorial-basics/introduction' },
     visual: (
       <div style={{ height: 350, overflow: 'hidden' }}>
         <CodeBlock language="typescript" title="login.spec.ts">
@@ -72,7 +72,7 @@ const FeatureList: FeatureItem[] = [
     eyebrow: 'Analyze your results',
     title: 'Beautiful reports out of the box.',
     description: 'Get detailed HTML reports with a single config line. See exactly what passed, failed, and why.',
-    cta: { label: 'Browse modules', to: '/modules/module/testla-screenplay-playwright/reporters' },
+    cta: { label: 'Browse modules', to: '/modules/testla-screenplay-playwright/reporters#html-reporter' },
     visual: <ReportScreenshot />,
   },
 ];

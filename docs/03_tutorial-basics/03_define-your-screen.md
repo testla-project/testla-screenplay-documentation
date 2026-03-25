@@ -31,7 +31,7 @@ Actor.attemptsTo(
 );
 ```
 
-For the further reference in our learning section, we will define the PlaywrightScreen as follows.
+For the further reference in our learning section, we will define the PlaywrightScreen as followes.
 
 ```typescript
 export class PlaywrightScreen {

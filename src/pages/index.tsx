@@ -33,8 +33,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="Testla Screenplay"
+      description="Stop writing brittle UI tests. Leverage the Screenplay Pattern to keep your test suite maintainable, extensible, and scalable.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
