@@ -86,7 +86,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
       defaultMode: 'dark',
       disableSwitch: true,
     },
